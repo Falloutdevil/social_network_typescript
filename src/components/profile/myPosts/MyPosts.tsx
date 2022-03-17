@@ -8,14 +8,16 @@ export const MyPosts = () => {
             my posts
             <div>
                 <div>
-                    <textarea name="" id=""></textarea>
+                    <textarea></textarea>
                     <button>Add post</button>
                 </div>
                 <div className={s.posts}>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    <Post message="Hi, how are you?"
+                          likeCount={15}
+                    />
+                    <Post message="My first post"
+                          likeCount={20}
+                    />
                 </div>
             </div>
         </div>

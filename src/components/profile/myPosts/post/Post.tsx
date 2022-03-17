@@ -2,13 +2,22 @@ import React from 'react';
 
 import s from './Post.module.css';
 
-export const Post = () => {
+type MessageType = {
+    message: string
+    likeCount: number
+}
+
+
+export const Post: React.FC<MessageType> = (props) => {
+
+
+
     return (
         <div className={s.item}>
             <img src="https://download-cs.org/uploads/posts/2020-06/1593142164_13.jpg" alt="ava"/>
-            post 1
+            {props.message}
             <div>
-                <span>like</span>
+                <span> like {props.likeCount}</span>
             </div>
         </div>
     )
