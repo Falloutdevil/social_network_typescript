@@ -13,10 +13,10 @@ export const MyPosts = () => {
                 </div>
                 <div className={s.posts}>
                     <Post message="Hi, how are you?"
-                          likeCount={15}
+                          likesCount={15}
                     />
                     <Post message="My first post"
-                          likeCount={20}
+                          likesCount={20}
                     />
                 </div>
             </div>
