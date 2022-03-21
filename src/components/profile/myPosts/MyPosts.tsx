@@ -1,14 +1,13 @@
 import s from './MyPosts.module.css';
 import React from 'react';
 import {Post} from './post/Post';
+import {PostsType} from '../../../index';
 
-export const MyPosts = () => {
+type PropsType = {
+    posts: PostsType[]
+}
 
-    let posts = [
-        {id: 1, message: 'Hi, how are you?', likesCount: 15},
-        {id: 2, message: 'My first post', likesCount: 20},
-
-    ];
+export const MyPosts: React.FC<PropsType> = ({posts}) => {
 
     let postsElements = posts
         .map(p => <Post message={p.message} likesCount={p.likesCount}/>);
@@ -19,7 +18,7 @@ export const MyPosts = () => {
             <div>
                 <div>
                     <div>
-                        <textarea></textarea>
+                        <textarea>1</textarea>
                     </div>
 
                     <div>
