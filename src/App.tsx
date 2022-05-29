@@ -4,17 +4,16 @@ import {Navbar} from './components/navbar/Navbar';
 import {Profile} from './components/profile/Profile';
 import {Dialogs} from './components/dialogs/Dialogs';
 import {BrowserRouter, Route} from 'react-router-dom';
-
+import state from './redux/state';
 import './App.css';
-import {DialogsType, MessagesType, PostsType} from './index';
 
-type PropsType = {
-    posts: PostsType[]
-    dialogs: DialogsType[]
-    messages: MessagesType[]
-}
 
-const App: React.FC<PropsType> = ({posts, dialogs, messages}) => {
+
+function App()  {
+    let dialogs = state.dialogsPage.dialogs
+    let messages = state.dialogsPage.messages
+    let posts = state.profilePage.posts
+
     return (
         <BrowserRouter>
             <div className="app-wrapper">
